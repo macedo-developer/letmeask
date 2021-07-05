@@ -8,6 +8,8 @@ import { useRoom } from "../hooks/useRoom";
 import { database } from "../services/firebase";
 
 import deleteImg from "../assets/images/delete.svg";
+import checkImg from "../assets/images/check.svg";
+import answerImg from "../assets/images/answer.svg";
 
 import "../styles/room.scss";
 
@@ -30,6 +32,18 @@ export function AdminRoom() {
     });
 
     history.push(`/`);
+  }
+
+  async function handleCheckQuestionAsAnswered(questionId: string) {
+    await database.ref(`rooms/${roomId}/questions/${questionId}`).update({
+      isAnswered: true,
+    });
+  }
+
+  async function handleHighLightQuestion(questionId: string) {
+    await database.ref(`rooms/${roomId}/questions/${questionId}`).update({
+      isHighLighted: true,
+    });
   }
 
   async function handleDeleteQuestion(questionId: string) {
@@ -70,7 +84,29 @@ export function AdminRoom() {
                 key={question.id}
                 content={question.content}
                 author={question.author}
+                isAnswered={question.isAnswered}
+                isHighLighted={question.isHighLighted}
               >
+                {!question.isAnswered && (
+                  <>
+                    <button
+                      className="check-button"
+                      type="button"
+                      onClick={() => handleCheckQuestionAsAnswered(question.id)}
+                    >
+                      <img src={checkImg} alt="Marcar como respondida" />
+                    </button>
+
+                    <button
+                      className="answer-button"
+                      type="button"
+                      onClick={() => handleHighLightQuestion(question.id)}
+                    >
+                      <img src={answerImg} alt="Dar destaque a pergunta" />
+                    </button>
+                  </>
+                )}
+
                 <button
                   className="delete-button"
                   type="button"
