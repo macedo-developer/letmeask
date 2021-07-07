@@ -4,7 +4,8 @@
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-como-executar">Como executar</a>&nbsp;&nbsp;&nbsp;
+  <a href="#-como-executar">Como executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto-em-producao">Projeto em Produção</a>&nbsp;&nbsp;&nbsp;
 </p>
 
 <p align="center">
@@ -42,6 +43,10 @@ O letmeask é um app onde é possivel criar e entrar em sala de perguntas, muito
 - Inicie o servidor com `yarn dev`
 
 Agora você pode acessar [`localhost:3000`](http://localhost:3000) do seu navegador.
+
+## 💻 Projeto em Execução
+
+- [Clique aqui!](https://letmeask-815ce.web.app)
 
 ---
 
