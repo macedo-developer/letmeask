@@ -32,6 +32,10 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O letmeask é um app onde é possivel criar e entrar em sala de perguntas, muito útil para quem faz lives, reuniões e precisa de um app para gerenciar as perguntas.
 
+<p align="center">
+  <img alt="Letmeask" src=".github/mock2.jpg" width="100%">
+</p>
+
 ## 🚀 Como executar
 
 - Clone o repositório
